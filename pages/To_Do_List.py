@@ -1,2 +1,2 @@
-from streamlit import *
-print("Brown")
+import streamlit as st
+st.title("duck")
