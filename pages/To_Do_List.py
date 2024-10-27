@@ -1,2 +1,3 @@
-import streamlit as st
-st.title("brown")
+from streamlit import *
+page_link("Welcome_Page.py",label="k")
+
