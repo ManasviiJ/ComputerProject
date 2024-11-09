@@ -19,4 +19,4 @@ subheader('Your new habits:')
 for habit, days in session_state.habits.items():
     write(f"{habit} for {days} days")
 
-ballons()
+balloons()
