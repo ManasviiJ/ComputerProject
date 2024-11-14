@@ -1,6 +1,6 @@
 from streamlit import *
 
-title(":rainbow[Welcome!]")
+title(":rainbow[Trackyoduck]")
 subheader(":blue[Build Better Habits, Build a Better Life]")
 
 page_link("pages/Dashboard.py",label="Dashboard", icon="🐉")
