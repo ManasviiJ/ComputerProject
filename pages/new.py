@@ -13,7 +13,6 @@ task = st.text_input("New Task")
 # If the user enters a task, add it to the list
 if st.button("Add Task") and task:
     st.session_state.tasks.append({"task": task, "done": False})
-    st.experimental_rerun()
 
 # Display existing tasks
 for idx, task_item in enumerate(st.session_state.tasks):
