@@ -3,7 +3,7 @@ import time
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 
-if 'entry' not in session_state:
+if 'entry_list' not in session_state:
     session_state.entry_list=[]
   
 title("Habits Scorecard")
