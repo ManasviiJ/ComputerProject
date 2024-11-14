@@ -1,4 +1,23 @@
 from streamlit import *
+import graphviz
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 title("Dashboard")
+
+# Create a graphlib graph object
+graph = graphviz.Digraph()
+graph.edge("run", "intr")
+graph.edge("intr", "runbl")
+graph.edge("runbl", "run")
+graph.edge("run", "kernel")
+graph.edge("kernel", "zombie")
+graph.edge("kernel", "sleep")
+graph.edge("kernel", "runmem")
+graph.edge("sleep", "swap")
+graph.edge("swap", "runswap")
+graph.edge("runswap", "new")
+graph.edge("runswap", "runmem")
+graph.edge("new", "runmem")
+graph.edge("sleep", "runmem")
+
+st.graphviz_chart(graph)
