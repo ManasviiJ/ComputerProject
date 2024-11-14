@@ -1,8 +1,7 @@
 from streamlit import *
 
 title(":rainbow[Welcome!]")
-subheader(":red[Build Better Habits, Build a Better Life]")
-write("What would you like to do today?")
+subheader(":blue[Build Better Habits, Build a Better Life]")
 
 page_link("pages/Dashboard.py",label="Dashboard", icon="🐉")
 page_link("pages/Habits.py", label="Habits", icon="🌳")
