@@ -1,13 +1,13 @@
-Project Title: For now lets call our app as "Habit Tracker overdone"
+Project Title
 
-Description: This is just our computer project which is suposed to be a super easy shi done on IDLE by hey! who's complaining with this cool stuff huh?
+Description:
 
-Installation Instructions: uhm call me for this one
+Installation Instructions:
 
-Usage: to get marks
+Usage:
 
-Contributing: you have to
+Contributing:
 
-License: this proect entirely belongs to @ManasviiJ (jk dont kill me)
+License:
 
-Contact Information: whatsapp :)
+Contact Information:
