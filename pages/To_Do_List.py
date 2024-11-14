@@ -10,5 +10,5 @@ task=text_input("Enter new task")
 session_state.task_list.append(task)
 
 for i in session_state.task_list:
-  if checkbox(i):
+  if radio(i):
     balloons()
