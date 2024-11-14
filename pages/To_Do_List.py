@@ -9,11 +9,7 @@ if 'task_list' not in session_state:
 task=text_input("Enter new task")
 session_state.task_list.append(task)
 
-genre = st.radio(
-    "Your tasks:",
-    session_state.task_list.append,
-    index=None,
-)
+genre = st.radio("Your tasks:",session_state.task_list)
 
 st.write("You selected:", genre)
 
