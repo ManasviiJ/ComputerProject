@@ -3,8 +3,14 @@ import time
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 
+if 'entry' not in session_state:
+    session_state.entry_list=[]
+  
 title("Habits Scorecard")
 entry=text_input("Make a list of your daily habits")
+session_state.entry_list.append(entry)
+for i in entry:
+  checkbox(i)
 
 
 divider()
