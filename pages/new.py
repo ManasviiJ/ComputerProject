@@ -26,13 +26,3 @@ for idx, task_item in enumerate(st.session_state.tasks):
     # Update the task status when checkbox is clicked
     if task_done != task_item['done']:
         st.session_state.tasks[idx]["done"] = task_done
-
-# Display a list of tasks and their status
-completed_tasks = [task['task'] for task in st.session_state.tasks if task['done']]
-incomplete_tasks = [task['task'] for task in st.session_state.tasks if not task['done']]
-
-st.write("### Completed Tasks")
-st.write("\n".join(completed_tasks) if completed_tasks else "No completed tasks.")
-
-st.write("### Incomplete Tasks")
-st.write("\n".join(incomplete_tasks) if incomplete_tasks else "No incomplete tasks.")
