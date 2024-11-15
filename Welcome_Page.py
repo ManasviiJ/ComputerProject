@@ -10,7 +10,7 @@ set_page_config(
 title(":rainbow[Trackyoduck]")
 subheader(":blue[Build Better Habits, Build a Better Life]")
 
-col1,col2,col3=columns(3)
+col1,col2=columns(2)
 with col1:
     page_link("pages/Dashboard.py",label="Dashboard", icon="🐉")
     page_link("pages/Habits.py", label="Habits", icon="🌳")
@@ -19,6 +19,7 @@ with col2:
     page_link("pages/To_Do_List.py",label="To Do",icon="✔")
 
 divider()
-with col3:
+column1,column2,column3=columns(3)
+with column3:
     page_link("pages/About_us.py", label=":grey[About us]", icon="❤")
 
