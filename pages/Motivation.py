@@ -26,6 +26,7 @@ mot_list=["You do not rise to the level of your goals. You fall to the level of 
 title("Do you want to get motivated:)?")
 
 if button("motivate me",icon="👍🏼"):
+  balloons()
   toast(mot_list[random.randrange(len(mot_list))])
 divider()
 
