@@ -9,7 +9,6 @@ set_page_config(
 title(":rainbow[Trackyoduck]")
 subheader(":blue[Build Better Habits, Build a Better Life]")
 
-divider()
 col1,col2=columns(2)
 with col1:
     page_link("pages/Dashboard.py",label="Dashboard", icon="🐉")
