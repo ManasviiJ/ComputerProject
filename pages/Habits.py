@@ -17,7 +17,6 @@ if  button('Add habit'):
   
 subheader('Your new habits:')
 for habit, days in session_state.habits.items():
-    the_habit=habit,"for",days,"days"
-    if checkbox(the_habit):
+    if radio(habit,"for",days,"days"):
         balloons()
 
