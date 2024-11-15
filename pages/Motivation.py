@@ -1,4 +1,5 @@
 from streamlit import*
+import random
 page_link("Welcome_Page.py",label="",icon="🔙")
 
 mot_list=["You do not rise to the level of your goals. You fall to the level of your systems.",
@@ -21,9 +22,13 @@ mot_list=["You do not rise to the level of your goals. You fall to the level of 
 "You do not need to be the best, you just need to be 1% better than yesterday.",
 "Master the fundamentals. Master the basics. Build a strong foundation."
 ]
+
 title("Do you want to get motivated:)?")
-button("motivate me",icon="👍🏼")
+
+if button("motivate me",icon="👍🏼"):
+  toast(mot_list[random.randrange(len(mot_list))])
 divider()
+
 if button("no thank you",icon="👎🏼"):
   snow()
 
