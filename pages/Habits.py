@@ -17,4 +17,4 @@ if button('Add habit'):
   
 subheader('Your new habits:')
 for habit, days in session_state.habits.items():
-    checkbox(habit,help=f"for {days} days")
+    checkbox(f"for {days} days")
