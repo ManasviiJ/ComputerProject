@@ -16,13 +16,13 @@ for task_status in session_state.tasks:
    
 col1,col2=columns(2)
 with col2: 
-  subheader('Tasks Completed')
+  subheader(':green[Tasks Completed]')
   for task_done in session_state.tasks:
     if task_done['status']:
       write(task_done['task'])
 
 with col1:
-  subheader('Tasks Inomplete')
+  subheader(':red[Tasks Inomplete]')
   for task_not_done in session_state.tasks:
     if task_not_done['status']==False:
       write(task_not_done['task'])
