@@ -15,4 +15,8 @@ with col2:
   for task_not_done in session_state.tasks:
     if task_not_done['status']==False:
       write(task_not_done['task'])
+divider()
+title("Calender")
+date=date_input("select a date")
+write("Selected Date:",date)
 
