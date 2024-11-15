@@ -26,5 +26,5 @@ subheader('Your new habits:')
 for habit, days in session_state.habits.items():
     if checkbox(habit,help=f"for {days} days"):
         balloons()
-        toast("Good job! You have completed", session_state.count/len(session_state.habits) ,"tasks")
+        toast(f"Good job! You have completed {session_state.count}/{len(session_state.habits)} tasks)
 
