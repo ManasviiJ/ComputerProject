@@ -20,6 +20,6 @@ with col2:
 
 divider()
 column1,column2,column3=columns(3)
-with column3:
+with column2:
     page_link("pages/About_us.py", label=":grey[About us]", icon="❤")
 
