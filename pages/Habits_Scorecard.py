@@ -8,7 +8,8 @@ if 'entry_list' not in session_state:
   
 title("Habits Scorecard")
 entry=text_input("Make a list of your daily habits")
-session_state.entry_list.append(entry)
+if button("Enter")
+    session_state.entry_list.append(entry)
 for i in session_state.entry_list:
   write(i)
 
