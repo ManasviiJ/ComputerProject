@@ -1,6 +1,8 @@
 from streamlit import *
 
 page_link("Welcome_Page.py",label="",icon="🔙")
+title(":violet[Dashboard]")
+write()
 
 title("Calender")
 date=date_input("select a date")
@@ -8,8 +10,6 @@ write("Selected Date:",date)
 
 divider()
 
-title(":violet[Dashboard]")
-write()
 col1,col2=columns(2)
 with col1:
   subheader(":grey[Your existing habits:]")
