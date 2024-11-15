@@ -4,11 +4,6 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(":violet[Dashboard]")
 write()
 
-from streamlit_calendar import calendar
-calendar()
-
-divider()
-
 col1,col2=columns(2)
 with col1:
   subheader(":grey[Your existing habits:]")
