@@ -11,7 +11,7 @@ with col1:
   for habit,days in session_state.habits.items():
     write(habit,"for",days,"days")
 with col2:
-  subheader("Your To-DO List for the day")
+  subheader("Incomplete tasks in to do list")
   for task_not_done in session_state.tasks:
     if task_not_done['status']==False:
       write(task_not_done['task'])
