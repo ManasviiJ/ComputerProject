@@ -7,7 +7,7 @@ write()
 col1,col2=columns(2)
 with col1:
   subheader(":grey[Your existing habits:]")
-    for habit,days in session_state.habits.items():
-  write(habit,"for",days,"days")
+  for habit,days in session_state.habits.items():
+    write(habit,"for",days,"days")
 with col2:
   subheader("Your To-DO List for the day")
