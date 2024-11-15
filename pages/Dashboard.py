@@ -12,3 +12,7 @@ with col1:
     write(habit,"for",days,"days")
 with col2:
   subheader("Your To-DO List for the day")
+  for task_not_done in session_state.tasks:
+    if task_not_done['status']==False:
+      write(task_not_done['task'])
+
