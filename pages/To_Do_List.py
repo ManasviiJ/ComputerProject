@@ -3,16 +3,27 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 
 title("To Do List")
 
-if 'task_list' not in session_state:
-  session_state.task_list=[]
+if 'tasks' not in session_state:
+  session_state.tasks=[]
   
 task=text_input("Enter new task")
-session_state.task_list.append(task)
+if task and button('add task'):
+  session_state.tasks.append({'task':task,'status':False})
 
-genre = st.radio("Your tasks:",session_state.task_list)
+subheader('Your tasks:')
+for task_status in session_state.tasks:
+  task_status['status']=checkbox(label=task_status['task'],key=session_state.tasks.index(task_status),help=None)
+   
+col1,col2=columns(2)
+with col2: 
+  subheader('Tasks Completed')
+  for task_done in session_state.tasks:
+    if task_done['status']:
+      write(task_done['task'])
 
-st.write("You selected:", genre)
+with col1:
+  subheader('Tasks Inomplete')
+  for task_not_done in session_state.tasks:
+    if task_not_done['status']==False:
+      write(task_not_done['task'])
 
-for i in session_state.task_list:
-  if radio(i):
-    balloons()
