@@ -4,6 +4,7 @@ balloons()
 
 title("Do you want to get motivated:)?")
 button("motivate me",icon="👍")
+button("no thank you",icon="👎🏼")
 motivate_list=
 
 
