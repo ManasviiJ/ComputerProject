@@ -1,8 +1,11 @@
 from streamlit import *
+from streamlit_calendar import calendar
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 title(":violet[Dashboard]")
 write()
+
+calendar()
 
 col1,col2=columns(2)
 with col1:
