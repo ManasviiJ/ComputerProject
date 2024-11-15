@@ -12,7 +12,7 @@ if 'habits' not in session_state:
 new_habit=text_input('Enter you new habit', label_visibility='collapsed')
 days_to_follow=select_slider('How  many ***days*** do you wish to follow your new habit?', options=range(31))
   
-if button('Add habit') and " " not in new_habit and "" not in new_habit:
+if button('Add habit'):
     session_state.habits[new_habit]=days_to_follow
   
 subheader('Your new habits:')
