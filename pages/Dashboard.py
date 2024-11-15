@@ -5,6 +5,9 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(":violet[Dashboard]")
 write()
 
+if 'habits' not in session_state or 'tasks' not in session_state:
+  toast('Hello there! Try adding some habits and tasks in the habits and tasks page to see your dashboard')
+
 col1,col2=columns(2)
 with col1:
   subheader(":grey[Your existing habits:]")
