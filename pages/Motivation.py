@@ -27,7 +27,7 @@ title("Do you want to get motivated:)?")
 
 if button("motivate me",icon="👍🏼"):
   balloons()
-  caption('All of these quotes are from the book Atomic Habits from which our app is inspired!)
+  caption('All of these quotes are from the book Atomic Habits from which our app is inspired!')
   toast(mot_list[random.randrange(len(mot_list))])
 divider()
 
