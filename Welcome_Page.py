@@ -6,11 +6,7 @@ set_page_config(
     layout="centered",  # Or "centered" "wide"
     initial_sidebar_state="collapsed"  # Options: "expanded", "collapsed", "auto"
 )
-
-column1,column2,column3=columns(3)
-
-with column2:
-    title(":rainbow[Trackyoduck]")
+title(":rainbow[Trackyoduck]")
 subheader(":blue[Build Better Habits, Build a Better Life]")
 
 col1,col2=columns(2)
@@ -22,7 +18,7 @@ with col2:
     page_link("pages/To_Do_List.py",label="To Do",icon="✔")
 
 divider()
-
+column1,column2,column3=columns(3)
 with column2:
     page_link("pages/About_us.py", label=":grey[About us]", icon="❤")
 
