@@ -1,7 +1,12 @@
 from streamlit import *
 
 page_link("Welcome_Page.py",label="",icon="🔙")
-balloons()
+
+title("Calender")
+date=date_input("select a date")
+write("Selected Date:",date)
+
+divider()
 
 title(":violet[Dashboard]")
 write()
@@ -15,8 +20,3 @@ with col2:
   for task_not_done in session_state.tasks:
     if task_not_done['status']==False:
       write(task_not_done['task'])
-divider()
-title("Calender")
-date=date_input("select a date")
-write("Selected Date:",date)
-
