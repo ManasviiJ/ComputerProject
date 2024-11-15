@@ -3,7 +3,7 @@ from streamlit import *
 page_link("Welcome_Page.py",label="",icon="🔙")
 
 title(":red[Why choose us?]")
-write_stream(" TrackYourDuck is more than just a name; it's a playful reminder to keep paddling, no matter how challenging it may seem.")
+st.write(" TrackYourDuck is more than just a name; it's a playful reminder to keep paddling, no matter how challenging it may seem.")
 markdown('''*Description:*
 
 Trackyoduck is a simple, yet powerful habit tracker app inspired by the principles of "Atomic Habits". Our app helps you create lasting changes by  by focusing on small incremental improvements
