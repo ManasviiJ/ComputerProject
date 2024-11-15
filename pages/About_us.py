@@ -5,7 +5,7 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(":red[Why choose us?]")
 markdown('''*Description:*
 
-HabitForge is a simple, yet powerful habit tracker app inspired by the principles of "Atomic Habits". Our app helps you create lasting changes by  by focusing on small incremental improvements
+Trackyoduck is a simple, yet powerful habit tracker app inspired by the principles of "Atomic Habits". Our app helps you create lasting changes by  by focusing on small incremental improvements
 That's correct!
 
 Daniel Kahneman, Nir Eyal, and Aubrey Marcus are indeed notable figures who have drawn inspiration from "Atomic Habits" by James Clear.
