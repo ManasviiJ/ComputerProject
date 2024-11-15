@@ -15,10 +15,6 @@ days_to_follow=select_slider('How  many ***days*** do you wish to follow your ne
   
 if  button('Add habit') and " " not in new_habit and "" not in new_habit:
     session_state.habits[new_habit]=days_to_follow
-
-def check():
-    session_state.count+=1
-    disabled=True
   
 subheader('Your new habits:')
 for habit, days in session_state.habits.items():
