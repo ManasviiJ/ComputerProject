@@ -1,5 +1,12 @@
 from streamlit import *
 
+st.set_page_config(
+    page_title="Trakyoduck",
+    page_icon="🦆",
+    layout="wide",  # Or "centered"
+    initial_sidebar_state="collapsed"  # Options: "expanded", "collapsed", "auto"
+)
+
 title(":rainbow[Trackyoduck]")
 subheader(":blue[Build Better Habits, Build a Better Life]")
 
