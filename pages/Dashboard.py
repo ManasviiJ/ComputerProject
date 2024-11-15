@@ -11,4 +11,3 @@ for habit,days in session_state.habits.items():
 divider()
 
 subheader("Your To-DO List for the day")
-for t
