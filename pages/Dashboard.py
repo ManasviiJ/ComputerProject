@@ -4,9 +4,8 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(":violet[Dashboard]")
 write()
 
-title("Calender")
-date=date_input("select a date")
-write("Selected Date:",date)
+from streamlit_calendar import calendar
+calendar()
 
 divider()
 
