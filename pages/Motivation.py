@@ -5,7 +5,7 @@ title("Do you want to get motivated:)?")
 button("motivate me",icon="👍🏼")
 divider()
 if button("no thank you",icon="👎🏼"):
-  balloons()
+  snow()
 
 
 
