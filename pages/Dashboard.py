@@ -5,8 +5,6 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(":violet[Dashboard]")
 write()
 
-calendar()
-
 col1,col2=columns(2)
 with col1:
   subheader(":grey[Your existing habits:]")
@@ -17,3 +15,6 @@ with col2:
   for task_not_done in session_state.tasks:
     if task_not_done['status']==False:
       write(task_not_done['task'])
+
+calendar()
+
