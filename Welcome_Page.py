@@ -1,7 +1,7 @@
 from streamlit import *
 
 set_page_config(
-    page_title="Trakyoduck",
+    page_title="TrackyoDuck",
     page_icon="🦆",
     layout="centered",  # Or "centered" "wide"
     initial_sidebar_state="collapsed"  # Options: "expanded", "collapsed", "auto"
