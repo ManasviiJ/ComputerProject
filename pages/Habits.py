@@ -24,7 +24,4 @@ def check():
   
 subheader('Your new habits:')
 for habit, days in session_state.habits.items():
-    if checkbox(habit,help=f"for {days} days"):
-        balloons()
-        toast("Good job! Keep it up!!")
-
+    checkbox(habit,help=f"for {days} days")
