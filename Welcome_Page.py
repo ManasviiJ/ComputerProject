@@ -6,7 +6,7 @@ set_page_config(
     layout="centered",  # Or "centered" "wide"
     initial_sidebar_state="collapsed"  # Options: "expanded", "collapsed", "auto"
 )
-title(":rainbow[Trackyoduck]")
+title(":rainbow[TrackyoDuck]")
 subheader(":blue[Build Better Habits, Build a Better Life]")
 
 col1,col2=columns(2)
