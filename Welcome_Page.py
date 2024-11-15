@@ -19,4 +19,5 @@ with col2:
 
 divider()
 page_link("pages/About_us.py", label=":grey[About us]", icon="❤")
+page_link("pages/Motivation.py", label="Motivation", icon="🗻")
 
