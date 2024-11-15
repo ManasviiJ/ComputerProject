@@ -1,5 +1,4 @@
 from streamlit import *
-import time
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 
