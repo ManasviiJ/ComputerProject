@@ -1,4 +1,5 @@
 from streamlit import *
+st.balloons()
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 title("Dashboard")
