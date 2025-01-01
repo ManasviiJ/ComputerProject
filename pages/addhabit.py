@@ -1,4 +1,5 @@
 from streamlit import *
+from streamlit import segmented_control
 
 page_link("pages/Habits.py",label="",icon="🔙")
 
@@ -11,7 +12,12 @@ if 'habits' not in session_state:
 #Entering new habits and displaying them
 new_habit=text_input('Enter you new habit', label_visibility='collapsed')
 days_to_follow=select_slider('How  many ***days*** do you wish to follow your new habit?', options=range(31))
-  
+
+write('Select a category')
+options = ["Morning", "Afternoon", "Evening"]
+selection =segmented_control("Directions", options, selection_mode="multi")
+markdown(f"Your selected options: {selection}.")
+
 if button('Add habit'):
     session_state.habits[new_habit]=days_to_follow
   

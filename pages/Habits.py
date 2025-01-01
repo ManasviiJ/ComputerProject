@@ -13,9 +13,9 @@ with col2:
     page_link("pages/addhabit.py",label="add a new habit",icon="🔥")
 
 subheader("Your current habits are:")
-options = ["Morning", "Afternoon", "Evening"]
-selection =segmented_control("Directions", options, selection_mode="multi")
-markdown(f"Your selected options: {selection}.")
+#options = ["Morning", "Afternoon", "Evening"]
+#selection =segmented_control("Directions", options, selection_mode="multi")
+#markdown(f"Your selected options: {selection}.")
 
 coli,colii,coliii=columns(3)
 with coli:
