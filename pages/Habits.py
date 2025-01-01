@@ -4,7 +4,7 @@ from streamlit import segmented_control
 page_link("Welcome_Page.py",label="",icon="🔙")
 
 title(':green[Habits]')
-subheader(:blue"What would you like to do today?")
+subheader(:blue["What would you like to do today?"])
 
 col1,col2=columns(2)
 with col1:
