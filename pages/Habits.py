@@ -23,5 +23,7 @@ with coli:
     text_area('',"wake up at 8am")
 with colii:
     subheader('Afternoon')
+    text_area('',"drink tea")
 with coliii:
     subheader('Evening')
+    text_area('',"read")
