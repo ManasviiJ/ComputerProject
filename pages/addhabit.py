@@ -24,7 +24,7 @@ with col1:
     for k,v in session_state.habits.items():
         if k=="Morning":
             if checkbox(v[0]):
-                session_state.habits[k]=None
+                session_state.habits.remove(k)
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
