@@ -35,6 +35,8 @@ options = ["Morning", "Afternoon", "Evening"]
 selection = segmented_control("Select a category", options, selection_mode="single")
 new_habit = text_input('Enter your new habit')
 time=number_input("How many hours will you perform this activity for?")
+toast('Hello there! Dont forget to select a category! Or it might just show an error!')
+
 
 if button('Add Habit'):
   session_state.habits[selection].append([new_habit,time])
@@ -53,5 +55,4 @@ with col3:
   
   if session_state.habits_done:
     session_state.df = create_habit_dataframe(session_state.habits_done)
-    write("Habit Summary:")
-    dataframe(session_state.df)
+    

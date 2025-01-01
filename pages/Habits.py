@@ -3,6 +3,9 @@ from streamlit import segmented_control
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 
+toast('Hello there! Try adding some habits to see your curent habits')
+
+
 title(':green[Habits]')
 subheader(':blue[What would you like to do today?]')
 
