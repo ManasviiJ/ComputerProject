@@ -12,7 +12,7 @@ with colii:
 with coli:
     page_link("pages/addhabit.py",label="Add a new habit",icon="🔥")
 
-subheader("Your current habits are:")
+subheader(":pink[Your current habits are:]")
 
 col1,col2,col3=columns(3)
 with col1:
