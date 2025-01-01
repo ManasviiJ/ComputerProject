@@ -5,10 +5,9 @@ import pandas as pd
 def display_habits(key,habits):
   """Displays habits in a column with checkboxes for marking them done."""
   for val in habits:
-    if checkbox(val):
+    if checkbox(val[0]):
       # Move habit to habits_done dictionary when checked
-      time=number_input("How long did you do this activity for? (in hours)",min_value=0.0,step=0.5)
-      session_state.habits_done[key].append([val,time])
+      session_state.habits_done[key].append(val)
       habits.remove(val)
       
 def create_habit_dataframe(habits_done):
@@ -35,9 +34,10 @@ if 'df' not in session_state:
 options = ["Morning", "Afternoon", "Evening"]
 selection = segmented_control("Select a category", options, selection_mode="single")
 new_habit = text_input('Enter your new habit')
+time=number_input("How many hours will you perform this activity for?")
 
 if button('Add Habit'):
-  session_state.habits[selection].append(new_habit)
+  session_state.habits[selection].append([new_habit,time])
 
 # Display habit categories and habits with checkboxes
 col1, col2, col3 = columns(3)
