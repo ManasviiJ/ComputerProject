@@ -9,15 +9,16 @@ title(':green[Add a new Habit]')
 #Initializing session state to store habits as a dictionary
 if 'habits' not in session_state:
     session_state.habits={}
+if 'habits_done' not in session_state:
+    session_state.habits_done={}
    
 #Entering new habits and displaying them
 options = ["Morning", "Afternoon", "Evening"]
 selection =segmented_control("Select a category", options, selection_mode="single")
 new_habit=text_input('Enter you new habit')
-time = time_input("When will you begin this habit?", value=None)
 
 if button('Add Habit'):
-    session_state.habits[selection]=[new_habit,time]
+    session_state.habits[selection]=[new_habit]
 
 col1,col2,col3=columns(3)
 with col1:
