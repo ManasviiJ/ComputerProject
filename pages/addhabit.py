@@ -9,7 +9,7 @@ title(':green[Add a new Habit]')
 if 'habits' not in session_state:
     session_state.habits={}
 if 'habits_done' not in session_state:
-    session_state.habits_done={'Morning':[],'Afternoon':[],'Evening'=[]}
+    session_state.habits_done={'Morning':[],'Afternoon':[],'Evening':[]}
    
 #Entering new habits and displaying them
 options = ["Morning", "Afternoon", "Evening"]
