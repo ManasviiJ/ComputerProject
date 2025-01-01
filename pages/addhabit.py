@@ -11,16 +11,30 @@ if 'habits' not in session_state:
    
 #Entering new habits and displaying them
 new_habit=text_input('Enter you new habit', label_visibility='collapsed')
-days_to_follow=select_slider('How  many ***days*** do you wish to follow your new habit?', options=range(31))
 
-write('Select a category')
 options = ["Morning", "Afternoon", "Evening"]
-selection =segmented_control("Directions", options, selection_mode="multi")
-markdown(f"Your selected options: {selection}.")
+selection =segmented_control("Select a category", options, selection_mode="single")
 
-if button('Add habit'):
-    session_state.habits[new_habit]=days_to_follow
-  
-subheader('Your new habits:')
-for habit, days in session_state.habits.items():
-    checkbox(f"{habit} for {days} days")
+if button('Add Habit'):
+    session_state.habit[selection]=[new_habit]
+
+col1,col2,col3=columns(3)
+with col1:
+    subheader('Morning')
+    for k,v in session_state.habits.items():
+        if k=="Morning":
+            for val in v:
+                write(val[0])
+with col2:
+    subheader("Afternoon")
+    for k,v in session_state.habits.items():
+        if k=="Afternoon":
+            for val in v:
+                write(val[0])
+with col3:
+    subheader('Evening')
+    for k,v in session_state.habits.items():
+        if k=="Evening":
+            for val in v:
+                write(val[0])
+
