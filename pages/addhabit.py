@@ -33,7 +33,7 @@ with col1:
         if k=="Morning":
             for val in v:
                 if checkbox(val):
-                    session_state.habits[k].remove(index[val])
+                    session_state.habits[k].remove(session_state.habits[k].index[val])
                     rerun()
 with col2:
     subheader("Afternoon")
@@ -41,7 +41,7 @@ with col2:
         if k=="Afternoon":
             for val in v:
                 if checkbox(val):
-                    session_state.habits[k].remove(index[val])
+                    session_state.habits[k].remove(session_state.habits[k].index[val])
                     rerun()
 with col3:
     subheader('Evening')
@@ -49,7 +49,7 @@ with col3:
         if k=="Evening":
             for val in v:
                 if checkbox(val):
-                    session_state.habits[k].remove(index[val])
+                    session_state.habits[k].remove(session_state.habits[k].index[val])
                     rerun()
 write(session_state.habits_done)
 
