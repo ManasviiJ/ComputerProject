@@ -17,27 +17,24 @@ selection =segmented_control("Select a category", options, selection_mode="singl
 new_habit=text_input('Enter you new habit')
 
 if button('Add Habit'):
-    session_state.habits[selection]=[new_habit]
+    session_state.habits[selection]=new_habit
 
-def timeforhabit(k,v):
-    time=slider("How long did you perform this habit for? (in hours)",0,24,1)
-    if button('add time'):
-      session_state.habits_done[k]=[v[0],time]
 
 col1,col2,col3=columns(3)
 with col1:
     subheader('Morning')
     for k,v in session_state.habits.items():
         if k=="Morning":
-            if checkbox(v[0]):
-                timeforhabit(k,v)
+            if checkbox(v):
+                time=number_input("How many hours did you perform this habit for? (in hours)")
+                session_state.habits_done[k]=[v,time]
                 session_state.habits.pop(k)
                 rerun()
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
         if k=="Afternoon":
-            if checkbox(v[0]):
+            if checkbox(v):
                 timeforhabit(k,v)
                 session_state.habits.pop(k)
                 rerun()
@@ -45,7 +42,7 @@ with col3:
     subheader('Evening')
     for k,v in session_state.habits.items():
         if k=="Evening":
-            if checkbox(v[0]):
+            if checkbox(v):
                 session_state.habits.pop(k)
                 rerun()
 write(session_state.habits_done)
