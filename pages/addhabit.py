@@ -26,6 +26,11 @@ with col1:
     for k,v in session_state.habits.items():
         if k=="Morning":
             if checkbox(v[0]):
+                with form('time'):
+                    time=slider("How long did you perform this habit  (in hours)",options=range(25))
+                    submitted = form_submit_button("Submit")
+                    if submitted:
+                        session_state.habits_done[k]=[v[0],time]
                 session_state.habits.pop(k)
                 rerun()
 with col2:
@@ -42,4 +47,5 @@ with col3:
             if checkbox(v[0]):
                 session_state.habits.pop(k)
                 rerun()
+write(session_state.habits_done)
 
