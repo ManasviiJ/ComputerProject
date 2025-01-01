@@ -26,21 +26,21 @@ with col1:
     subheader('Morning')
     for k,v in session_state.habits.items():
         if k=="Morning":
-            if checkbox(v[0],'at',v[1]):
+            if checkbox(f"{v[0]} at {v[1]}"):
                 session_state.habits.pop(k)
                 rerun()
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
         if k=="Afternoon":
-            if checkbox(v[0],'at',v[1]):
+            if checkbox(f"{v[0]} at {v[1]}"):
                 session_state.habits.pop(k)
                 rerun()
 with col3:
     subheader('Evening')
     for k,v in session_state.habits.items():
         if k=="Evening":
-            if checkbox(v[0],'at',v[1]):
+            if checkbox(f"{v[0]} at {v[1]}"):
                 session_state.habits.pop(k)
                 rerun()
 
