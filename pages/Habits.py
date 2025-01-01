@@ -10,7 +10,7 @@ coli,colii=columns(2)
 with colii:
     page_link("pages/progress.py",label="See your progress",icon="🚨")
 with coli:
-    page_link("pages/addhabit.py",label="add a new habit",icon="🔥")
+    page_link("pages/addhabit.py",label="Add a new habit",icon="🔥")
 
 subheader("Your current habits are:")
 
