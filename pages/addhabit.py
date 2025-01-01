@@ -28,8 +28,9 @@ with col1:
             if checkbox(v):
                 time=number_input("How many hours did you perform this habit for? (in hours)")
                 session_state.habits_done[k]=[v,time]
-                session_state.habits.pop(k)
-                rerun()
+                if len(session_state.habits_done)!=0:
+                    session_state.habits.pop(k)
+                    rerun()
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
