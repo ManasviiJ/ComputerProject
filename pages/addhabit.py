@@ -11,11 +11,12 @@ if 'habits' not in session_state:
     session_state.habits={}
    
 #Entering new habits and displaying them
-new_habit=text_input('Enter you new habit', label_visibility='collapsed')
+
 
 options = ["Morning", "Afternoon", "Evening"]
 selection =segmented_control("Select a category", options, selection_mode="single")
-time = time_input("When will you begin this habit", value=None)
+new_habit=text_input('Enter you new habit', label='Enter your habit')
+time = time_input("When will you begin this habit?", value=None)
 
 if button('Add Habit'):
     session_state.habits[selection]=[new_habit,time]
