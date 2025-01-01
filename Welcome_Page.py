@@ -13,9 +13,8 @@ col1,col2=columns(2)
 with col1:
     page_link("pages/Dashboard.py",label="Dashboard", icon="🐉")
     page_link("pages/Habits.py", label="Habits", icon="🌳")
-    page_link("pages/Motivation.py", label="Motivation", icon="🗻")
 with col2:
-    page_link("pages/Habits_Scorecard.py",label="Habits Scorecard", icon="💯")
+    page_link("pages/Motivation.py", label="Motivation", icon="🗻")
     page_link("pages/To_Do_List.py",label="To Do",icon="✔")
 
 divider()
