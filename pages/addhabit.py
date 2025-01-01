@@ -23,15 +23,15 @@ with col1:
     subheader('Morning')
     for k,v in session_state.habits.items():
         if k=="Morning":
-            write(v)
+            write(v[0])
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
         if k=="Afternoon":
-            write(v)
+            write(v[0])
 with col3:
     subheader('Evening')
     for k,v in session_state.habits.items():
         if k=="Evening":
-            write(v)
+            write(v[0])
 
