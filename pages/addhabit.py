@@ -28,6 +28,8 @@ if 'habits' not in session_state:
    session_state.habits = {"Morning": [], "Afternoon": [], "Evening": []}
 if 'habits_done' not in session_state:
   session_state.habits_done = {"Morning": [], "Afternoon": [], "Evening": []}
+if 'df' not in session_state:
+    session_state.df={}
 
 # Entering new habits and displaying them
 options = ["Morning", "Afternoon", "Evening"]
@@ -50,6 +52,6 @@ with col3:
   display_habits("Evening",session_state.habits["Evening"])
   
   if session_state.habits_done:
-    habit_df = create_habit_dataframe(session_state.habits_done)
+    session_state.df = create_habit_dataframe(session_state.habits_done)
     write("Habit Summary:")
-    dataframe(habit_df)
+    dataframe(session_state.df)
