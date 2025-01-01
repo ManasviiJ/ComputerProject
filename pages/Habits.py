@@ -20,7 +20,7 @@ markdown(f"Your selected options: {selection}.")
 coli,colii,coliii=columns(3)
 with coli:
     subheader('Morning')
-    text_area('Wake up at 8AM')
+    text_area('',"wake up at 8am")
 with colii:
     subheader('Afternoon')
 with coliii:
