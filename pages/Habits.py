@@ -6,7 +6,7 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(':green[Habits]')
 subheader(':blue[What would you like to do today?]')
 
-coli,coii=columns(2)
+coli,colii=columns(2)
 with coli:
     page_link("pages/progress.py",label="See your progress",icon="🚨")
 with colii:
