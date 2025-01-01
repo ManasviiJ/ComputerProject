@@ -1,55 +1,48 @@
-from streamlit import *
-from streamlit import segmented_control
+import streamlit as st
 
-page_link("pages/Habits.py",label="",icon="🔙")
+def display_habits(habits):
+  """Displays habits in a column with checkboxes for marking them done."""
+  for val in habits:
+    if checkbox(val):
+      # Move habit to habits_done dictionary when checked
+      session_state.habits_done[val] = True
+      habits.remove(val)
+      rerun()  # Refresh the app to update the habit lists
 
-title(':green[Add a new Habit]')
+if __name__ == "__main__":
+  page_link("pages/Habits.py", label="", icon="🔙")
 
-#Initializing session state to store habits as a dictionary
-if 'habits' not in session_state:
-    session_state.habits={"Morning":[],"Afternoon":[],"Evening":[]}
-if 'habits_done' not in session_state:
-    session_state.habits_done={}
-    
-#Entering new habits and displaying them
-options = ["Morning", "Afternoon", "Evening"]
-selection =segmented_control("Select a category", options, selection_mode="single")
-new_habit=text_input('Enter you new habit')
+  title(':green[Add a new Habit]')
 
-if button('Add Habit'):
+  # Initialize session state for habits and habits_done dictionaries
+  if 'habits' not in session_state:
+    session_state.habits = {"Morning": [], "Afternoon": [], "Evening": []}
+  if 'habits_done' not in session_state:
+    session_state.habits_done = {}
+
+  # Entering new habits and displaying them
+  options = ["Morning", "Afternoon", "Evening"]
+  selection = segmented_control("Select a category", options, selection_mode="single")
+  new_habit = text_input('Enter your new habit')
+
+  if button('Add Habit'):
     session_state.habits[selection].append(new_habit)
 
-'''def get_number_input():
-  """Displays a popup and gets a number input from the user."""
-  with sidebar:
-    title("Enter a Number")
-    number = number_input("Enter a number:")
-  return number'''
-
-col1,col2,col3=columns(3)
-with col1:
+  # Display habit categories and habits with checkboxes
+  col1, col2, col3 = columns(3)
+  with col1:
     subheader('Morning')
-    for k,v in session_state.habits.items():
-        if k=="Morning":
-            for val in v:
-                if checkbox(val):
-                    session_state.habits[k].remove(session_state.habits[k].index(val))
-                    rerun()
-with col2:
+    display_habits(session_state.habits["Morning"])
+  with col2:
     subheader("Afternoon")
-    for k,v in session_state.habits.items():
-        if k=="Afternoon":
-            for val in v:
-                if checkbox(val):
-                    session_state.habits[k].remove(session_state.habits[k].index(val))
-                    rerun()
-with col3:
+    display_habits(session_state.habits["Afternoon"])
+  with col3:
     subheader('Evening')
-    for k,v in session_state.habits.items():
-        if k=="Evening":
-            for val in v:
-                if checkbox(val):
-                    session_state.habits[k].remove(session_state.habits[k].index(val))
-                    rerun()
-write(session_state.habits_done)
+    display_habits(session_state.habits["Evening"])
 
+  # Display completed habits (if any)
+  if session_state.habits_done:
+    write("Completed Habits:")
+    for habit, done in session_state.habits_done.items():
+      if done:
+        write(f"- {habit}")
