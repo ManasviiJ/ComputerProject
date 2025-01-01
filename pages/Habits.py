@@ -13,9 +13,6 @@ with col2:
     page_link("pages/addhabit.py",label="add a new habit",icon="🔥")
 
 subheader("Your current habits are:")
-#options = ["Morning", "Afternoon", "Evening"]
-#selection =segmented_control("Directions", options, selection_mode="multi")
-#markdown(f"Your selected options: {selection}.")
 
 coli,colii,coliii=columns(3)
 with coli:
@@ -23,6 +20,7 @@ with coli:
     text_area('',"wake up at 8am")
 with colii:
     subheader('Afternoon')
-    text_area('',"drink tea")
+    text_area('',"drink tea at 4pm")
 with coliii:
     subheader('Evening')
+    text_area('',"eat dinner at 9pm")
