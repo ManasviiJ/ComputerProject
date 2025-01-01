@@ -1,4 +1,4 @@
-import streamlit as st
+from streamlit import *
 
 def display_habits(habits):
   """Displays habits in a column with checkboxes for marking them done."""
