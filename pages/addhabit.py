@@ -21,9 +21,9 @@ if button('Add Habit'):
 
 def get_number_input():
   """Displays a popup and gets a number input from the user."""
-  with st.sidebar:
-    st.title("Enter a Number")
-    number = st.number_input("Enter a number:")
+  with sidebar:
+    title("Enter a Number")
+    number = number_input("Enter a number:")
   return number
 
 col1,col2,col3=columns(3)
