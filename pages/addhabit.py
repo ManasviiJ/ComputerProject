@@ -7,7 +7,7 @@ def display_habits(key,habits):
   for val in habits:
     if checkbox(val):
       # Move habit to habits_done dictionary when checked
-      time=number_input("How long did you do this activity for? (in hours)")
+      time=number_input("How long did you do this activity for? (in hours)",min_value=0.0,step=0.5)
       session_state.habits_done[key].append([val,time])
       habits.remove(val)
       
