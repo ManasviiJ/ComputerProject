@@ -7,7 +7,7 @@ def display_habits(key,habits):
     if checkbox(val):
       # Move habit to habits_done dictionary when checked
       time=number_input("How long did you do this activity for? (in hours)")
-      session_state.habits_done[key] = [val,time]
+      session_state.habits_done[key].append([val,time])
       habits.remove(val)
  
 page_link("pages/Habits.py", label="", icon="🔙")
@@ -18,7 +18,7 @@ title(':green[Add a new Habit]')
 if 'habits' not in session_state:
    session_state.habits = {"Morning": [], "Afternoon": [], "Evening": []}
 if 'habits_done' not in session_state:
-  session_state.habits_done = {}
+  session_state.habits_done = {"Morning": [], "Afternoon": [], "Evening": []}
 
 # Entering new habits and displaying them
 options = ["Morning", "Afternoon", "Evening"]
