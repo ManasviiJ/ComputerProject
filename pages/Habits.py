@@ -6,21 +6,27 @@ page_link("Welcome_Page.py",label="",icon="🔙")
 title(':green[Habits]')
 subheader(':blue[What would you like to do today?]')
 
-col1,col2=columns(2)
-with col1:
+coli,coii2=columns(2)
+with coli:
     page_link("pages/progress.py",label="See your progress",icon="🚨")
-with col2:
+with colii:
     page_link("pages/addhabit.py",label="add a new habit",icon="🔥")
 
 subheader("Your current habits are:")
 
-coli,colii,coliii=columns(3)
-with coli:
+col1,col2,col3=columns(3)
+with col1:
     subheader('Morning')
-    text_area('',"wake up at 8am")
-with colii:
-    subheader('Afternoon')
-    text_area('',"drink tea at 4pm")
-with coliii:
+    for k,v in session_state.habits.items():
+        if k=="Morning":
+            write(v[0])
+with col2:
+    subheader("Afternoon")
+    for k,v in session_state.habits.items():
+        if k=="Afternoon":
+            write(v[0])
+with col3:
     subheader('Evening')
-    text_area('',"eat dinner at 9pm")
+    for k,v in session_state.habits.items():
+        if k=="Evening":
+            write(v[0])
