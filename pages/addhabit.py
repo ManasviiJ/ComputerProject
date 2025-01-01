@@ -19,12 +19,12 @@ new_habit=text_input('Enter you new habit')
 if button('Add Habit'):
     session_state.habits[selection].append(new_habit)
 
-def get_number_input():
+'''def get_number_input():
   """Displays a popup and gets a number input from the user."""
   with sidebar:
     title("Enter a Number")
     number = number_input("Enter a number:")
-  return number
+  return number'''
 
 col1,col2,col3=columns(3)
 with col1:
@@ -32,8 +32,8 @@ with col1:
     for k,v in session_state.habits.items():
         if k=="Morning":
             if checkbox(v):
-                number = get_number_input()
-                write("You entered:", number)
+                '''number = get_number_input()
+                write("You entered:", number)'''
                 session_state.habits.pop(k)
                 rerun()
 with col2:
