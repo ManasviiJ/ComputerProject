@@ -11,8 +11,6 @@ if 'habits' not in session_state:
     session_state.habits={}
    
 #Entering new habits and displaying them
-
-
 options = ["Morning", "Afternoon", "Evening"]
 selection =segmented_control("Select a category", options, selection_mode="single")
 new_habit=text_input('Enter you new habit')
@@ -26,21 +24,21 @@ with col1:
     subheader('Morning')
     for k,v in session_state.habits.items():
         if k=="Morning":
-            if checkbox(f"{v[0]} at {v[1]}"):
+            if checkbox(v[0]):
                 session_state.habits.pop(k)
                 rerun()
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
         if k=="Afternoon":
-            if checkbox(f"{v[0]} at {v[1]}"):
+            if checkbox(v[0]):
                 session_state.habits.pop(k)
                 rerun()
 with col3:
     subheader('Evening')
     for k,v in session_state.habits.items():
         if k=="Evening":
-            if checkbox(f"{v[0]} at {v[1]}"):
+            if checkbox(v[0]):
                 session_state.habits.pop(k)
                 rerun()
 
