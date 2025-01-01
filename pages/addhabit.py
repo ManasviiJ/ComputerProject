@@ -12,9 +12,9 @@ new_habit=text_input('Enter you new habit')
 
 #Initializing session state to store habits as a dictionary
 if 'habits' not in session_state:
-    session_state.habits={}
+    session_state.habits={options[0]:[],options[1]:[],options[2]:[]}
 if 'habits_done' not in session_state:
-    session_state.habits_done={options[0]:[],options[1]:[],options[2]:[]}
+    session_state.habits_done={}
 
 if button('Add Habit'):
     session_state.habits[selection].append(new_habit)
