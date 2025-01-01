@@ -29,7 +29,7 @@ with col1:
     for k,v in session_state.habits.items():
         if k=="Morning":
             if checkbox(v[0]):
-                time=slider("How long did you perform this habit (in hours)",options=range(25))
+                time=slider("How long did you perform this habit (in hours)",0,24,1)
                 session_state.habits_done[k]=[v[0],time]
                 session_state.habits.pop(k)
                 rerun()
