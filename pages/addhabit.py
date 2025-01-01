@@ -5,16 +5,16 @@ page_link("pages/Habits.py",label="",icon="🔙")
 
 title(':green[Add a new Habit]')
 
-#Initializing session state to store habits as a dictionary
-if 'habits' not in session_state:
-    session_state.habits={}
-if 'habits_done' not in session_state:
-    session_state.habits_done={'Morning':[],'Afternoon':[],'Evening':[]}
-   
 #Entering new habits and displaying them
 options = ["Morning", "Afternoon", "Evening"]
 selection =segmented_control("Select a category", options, selection_mode="single")
 new_habit=text_input('Enter you new habit')
+
+#Initializing session state to store habits as a dictionary
+if 'habits' not in session_state:
+    session_state.habits={}
+if 'habits_done' not in session_state:
+    session_state.habits_done={options[0]:[],options[1]:[],options[2]:[]}
 
 if button('Add Habit'):
     session_state.habits[selection].append(new_habit)
