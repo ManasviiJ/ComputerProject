@@ -1,5 +1,6 @@
 from streamlit import *
 import pandas as pd
+from streamlit import segmented_control
 
 def display_habits(key, habits):
     """Displays habits in a column with checkboxes for marking them done and recording duration."""
@@ -52,5 +53,5 @@ if __name__ == "__main__":
     # Create and display the DataFrame if habits_done has data
     if session_state.habits_done:
         habit_df = create_habit_dataframe(session_state.habits_done)
-        st.write("Habit Summary:")
-        st.dataframe(habit_df)
+        write("Habit Summary:")
+        dataframe(habit_df)
