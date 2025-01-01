@@ -15,7 +15,7 @@ if 'habits' not in session_state:
 
 options = ["Morning", "Afternoon", "Evening"]
 selection =segmented_control("Select a category", options, selection_mode="single")
-new_habit=text_input('Enter you new habit', label='Enter your habit')
+new_habit=text_input('Enter you new habit')
 time = time_input("When will you begin this habit?", value=None)
 
 if button('Add Habit'):
