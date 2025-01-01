@@ -9,7 +9,7 @@ title(':green[Add a new Habit]')
 if 'habits' not in session_state:
     session_state.habits={}
 if 'habits_done' not in session_state:
-    session_state.habits_done={}
+    session_state.habits_done={'Morning':[],'Afternoon':[],'Evening'=[]}
    
 #Entering new habits and displaying them
 options = ["Morning", "Afternoon", "Evening"]
@@ -17,7 +17,7 @@ selection =segmented_control("Select a category", options, selection_mode="singl
 new_habit=text_input('Enter you new habit')
 
 if button('Add Habit'):
-    session_state.habits[selection]=new_habit
+    session_state.habits[selection].append(new_habit)
 
 def get_number_input():
   """Displays a popup and gets a number input from the user."""
