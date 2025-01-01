@@ -25,14 +25,19 @@ with col1:
         if k=="Morning":
             if checkbox(v[0]):
                 session_state.habits.pop(k)
+                rerun()
 with col2:
     subheader("Afternoon")
     for k,v in session_state.habits.items():
         if k=="Afternoon":
-            write(v[0])
+            if checkbox(v[0]):
+                session_state.habits.pop(k)
+                rerun()
 with col3:
     subheader('Evening')
     for k,v in session_state.habits.items():
         if k=="Evening":
-            write(v[0])
+            if checkbox(v[0]):
+                session_state.habits.pop(k)
+                rerun()
 
