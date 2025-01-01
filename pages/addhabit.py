@@ -1,6 +1,5 @@
 from streamlit import *
 from streamlit import segmented_control
-import datetime
 
 page_link("pages/Habits.py",label="",icon="🔙")
 
@@ -20,6 +19,10 @@ new_habit=text_input('Enter you new habit')
 if button('Add Habit'):
     session_state.habits[selection]=[new_habit]
 
+def timeforhabit(k,v):
+    time=slider("How long did you perform this habit for? (in hours)",options=range(25))
+    session_state.habits_done[k]=[v[0],time]
+
 col1,col2,col3=columns(3)
 with col1:
     subheader('Morning')
@@ -35,6 +38,7 @@ with col2:
     for k,v in session_state.habits.items():
         if k=="Afternoon":
             if checkbox(v[0]):
+                timeforhabit(k,v)
                 session_state.habits.pop(k)
                 rerun()
 with col3:
