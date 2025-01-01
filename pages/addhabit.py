@@ -13,7 +13,10 @@ if 'habits' not in session_state:
 new_habit=text_input('Enter you new habit', label_visibility='collapsed')
 
 options = ["Morning", "Afternoon", "Evening"]
-options(':pink[Add a new Habit]')
+options(':pink["Morning"]')
+options(':grey["Evening"]')
+options(':yello["Afternoon"]')
+
 selection =segmented_control("Select a category", options, selection_mode="single")
 
 if button('Add Habit'):
