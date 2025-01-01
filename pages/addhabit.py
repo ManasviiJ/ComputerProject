@@ -1,5 +1,6 @@
 from streamlit import *
 from streamlit import segmented_control
+import pandas as pd
 
 def display_habits(key,habits):
   """Displays habits in a column with checkboxes for marking them done."""
@@ -9,6 +10,14 @@ def display_habits(key,habits):
       time=number_input("How long did you do this activity for? (in hours)")
       session_state.habits_done[key].append([val,time])
       habits.remove(val)
+      
+def create_habit_dataframe(habits_done):
+  """Creates a DataFrame from the habits_done dictionary."""
+  data = []
+  for key, habits in habits_done.items():
+    for habit, time in habits:
+      data.append({"Time of Day": key, "Habit": habit, "Hours": time})
+  return pd.DataFrame(data)
  
 page_link("pages/Habits.py", label="", icon="🔙")
 
@@ -39,3 +48,8 @@ with col2:
 with col3:
   subheader('Evening')
   display_habits("Evening",session_state.habits["Evening"])
+  
+  if session_state.habits_done:
+    habit_df = create_habit_dataframe(session_state.habits_done)
+    write("Habit Summary:")
+    dataframe(habit_df)
