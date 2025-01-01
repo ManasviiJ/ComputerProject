@@ -16,7 +16,7 @@ options = ["Morning", "Afternoon", "Evening"]
 selection =segmented_control("Select a category", options, selection_mode="single")
 
 if button('Add Habit'):
-    session_state.habit[selection]=[new_habit]
+    session_state.habits[selection]=[new_habit]
 
 col1,col2,col3=columns(3)
 with col1:
