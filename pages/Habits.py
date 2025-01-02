@@ -1,5 +1,4 @@
 from streamlit import *
-from streamlit import segmented_control
 
 page_link("Welcome_Page.py",label="",icon="🔙")
 

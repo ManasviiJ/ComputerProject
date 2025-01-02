@@ -9,9 +9,9 @@ if 'habits' not in session_state or 'tasks' not in session_state:
 
 col1,col2=columns(2)
 with col1:
-  subheader(":grey[Your existing habits:]")
-  for habit,days in session_state.habits.items():
-    write(habit,"for",days,"days")
+  subheader("Your existing habits:")
+  for habit,time in session_state.habits.values():
+    write(habit,"for",time,"hours")
 with col2:
   subheader("Incomplete tasks in to do list")
   for task_not_done in session_state.tasks:
