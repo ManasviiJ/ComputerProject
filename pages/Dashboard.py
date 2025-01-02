@@ -11,7 +11,7 @@ col1,col2=columns(2)
 with col1:
   subheader("Your existing habits:")
   for habit_time in session_state.habits.values():
-    write(habit_time[0])
+    write(habit_time[0][0])
 with col2:
   subheader("Incomplete tasks in to do list")
   for task_not_done in session_state.tasks:
