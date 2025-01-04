@@ -10,9 +10,9 @@ subheader(':blue[What would you like to do today?]')
 
 coli,colii=columns(2)
 with colii:
-    page_link("habit_pages/progress.py",label="See your progress",icon="🚨")
+    page_link("pages/habit_pages/progress.py",label="See your progress",icon="🚨")
 with coli:
-    page_link("habit_pages/addhabit.py",label="Add a new habit",icon="🔥")
+    page_link("pages/habit_pages/addhabit.py",label="Add a new habit",icon="🔥")
 
 subheader(':red[Your current habits are:]')
 
